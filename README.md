@@ -6,8 +6,8 @@
 <li>MySQL 8.0.13</li>
 <li>Junit</li>
 <li>Mockito</li>
-
 </ul>
+Ищете что-то определенное?
 <h1>Requirements</h1>
 <ul>
 <li>JDK 16</li>
@@ -149,3 +149,4 @@ The app defines following CRUD APIs.
 <h4>You can use the Swagger API Documentation at http://{Your_Server}:{Port}/swagger-ui.html</h4>
 
 ![img_1.png](img_1.png)
+

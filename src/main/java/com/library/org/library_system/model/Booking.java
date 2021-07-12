@@ -3,6 +3,8 @@ package com.library.org.library_system.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 
@@ -17,11 +19,13 @@ public class Booking {
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Book.class)
     @JoinColumn(name = "id_book")
+    @Fetch(FetchMode.JOIN)
     private Book book;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = User.class)
     @JoinColumn(name = "id_user")
+    @Fetch(FetchMode.JOIN)
     private User user;
 
     @Column(name = "coment")
@@ -29,9 +33,6 @@ public class Booking {
 
 
     public Booking() {}
-
-
-
 
     public String getComent() {
         return coment;
@@ -65,5 +66,14 @@ public class Booking {
         this.user = user;
     }
 
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "id=" + id +
+                ", book=" + book.toString() +
+                ", coment='" + coment + '\'' +
+                '}';
+    }
 }
 

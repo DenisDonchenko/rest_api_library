@@ -29,7 +29,13 @@ public class Book {
         this.author = author;
         this.availability = availability;
         this.listBooking = listBooking;
+    }public Book(Long id, String title, String author, boolean availability) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.availability = availability;
     }
+
 
     public Set<Booking> getListBooking() {
         return listBooking;
@@ -71,5 +77,13 @@ public class Book {
         this.availability = availability;
     }
 
-
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", availability=" + availability +
+                '}';
+    }
 }

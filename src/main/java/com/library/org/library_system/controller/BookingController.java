@@ -1,10 +1,13 @@
 package com.library.org.library_system.controller;
 
+import com.library.org.library_system.model.BookUserDto;
 import com.library.org.library_system.model.Booking;
 import com.library.org.library_system.service.BookingService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/booking")
@@ -33,5 +36,9 @@ public class BookingController {
          bookingService.returnedBook(id_book,id_user);
 
     }
-
+    @ApiOperation("Get information about the users and the books they currently have")
+    @GetMapping("/takenBooks")
+    public List<BookUserDto> findTakenBooks(){
+        return bookingService.findTakenBooks();
+    }
 }

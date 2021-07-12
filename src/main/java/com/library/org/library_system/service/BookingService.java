@@ -1,12 +1,16 @@
 package com.library.org.library_system.service;
 
 import com.library.org.library_system.exception.ResourceNotFoundException;
+import com.library.org.library_system.model.Book;
+import com.library.org.library_system.model.BookUserDto;
 import com.library.org.library_system.model.Booking;
 import com.library.org.library_system.repository.BookingRepository;
 import com.library.org.library_system.repository.BooksRepository;
 import com.library.org.library_system.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 @Service
@@ -20,10 +24,6 @@ public class BookingService {
     private UserRepository userRepository;
 
     public Iterable<Booking> findAllBooking(){
-
-        for (Booking booking: bookingRepository.findAll()) {
-            System.out.println(booking.toString());
-        }
         return bookingRepository.findAll();
     }
 
@@ -52,6 +52,11 @@ public class BookingService {
         booking.setComent("Book returned");
         return  bookingRepository.save(booking);
     }
+
+    public List<BookUserDto>  findTakenBooks(){
+        return bookingRepository.findTakenBooks();
+    }
+
     private void exceptionMethod(Long id_book, Long id_user){
 
         if (!booksRepository.existsById(id_book)){
