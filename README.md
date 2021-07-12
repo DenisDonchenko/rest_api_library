@@ -6,8 +6,43 @@
 <li>MySQL 8.0.13</li>
 <li>Junit</li>
 <li>Mockito</li>
-
 </ul>
+<h1>Looking for something in particular?</h1>
+<table>
+ <thead>
+  <tr>
+	<th>Layer</th>
+	<th>Source</th>
+  </tr>
+ </thead>
+<tbody>
+	<tr>
+	  <td>REST API controllers</td>
+	  <td><a href="https://github.com/DenisDonchenko/rest_api_library/tree/main/src/main/java/com/library/org/library_system/controller">Controllers folder</a></td>	
+	</tr>
+	<tr>
+	  <td>Service</td>
+	  <td>Service folder</td>	
+	</tr>
+	<tr>
+	  <td>Repository</td>
+	  <td>Repository folder</td>	
+	</tr>
+	<tr>
+	  <td>Tests controllers</td>
+	  <td>Tests controllers folder</td>	
+	</tr>
+	<tr>
+	  <td>Tests service</td>
+	  <td>Tests service folder</td>	
+	</tr>
+	<tr>
+	  <td>Entities</td>
+	  <td>Entities folder</td>	
+	</tr>
+</tbody>
+</table>
+
 <h1>Requirements</h1>
 <ul>
 <li>JDK 16</li>
