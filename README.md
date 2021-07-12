@@ -1,12 +1,4 @@
-<h1>Technologies</h1>
-<ul>
-<li>Java 16</li>
-<li>Spring Boot</li>
-<li>Maven</li>
-<li>MySQL 8.0.13</li>
-<li>Junit</li>
-<li>Mockito</li>
-</ul>
+
 <h1>Looking for something in particular?</h1>
 <table>
  <thead>
@@ -43,6 +35,16 @@
 	
 </tbody>
 </table>
+
+<h1>Technologies</h1>
+<ul>
+<li>Java 16</li>
+<li>Spring Boot</li>
+<li>Maven</li>
+<li>MySQL 8.0.13</li>
+<li>Junit</li>
+<li>Mockito</li>
+</ul>
 
 <h1>Requirements</h1>
 <ul>
