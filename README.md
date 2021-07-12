@@ -18,28 +18,29 @@
 <tbody>
 	<tr>
 	  <td>REST API controllers</td>
-	  <td><a href="https://github.com/DenisDonchenko/rest_api_library/tree/main/src/main/java/com/library/org/library_system/controller">Controllers folder</a></td>	
-	</tr>
-	<tr>
-	  <td>Service</td>
-	  <td>Service folder</td>	
-	</tr>
-	<tr>
-	  <td>Repository</td>
-	  <td>Repository folder</td>	
-	</tr>
-	<tr>
-	  <td>Tests controllers</td>
-	  <td>Tests controllers folder</td>	
-	</tr>
-	<tr>
-	  <td>Tests service</td>
-	  <td>Tests service folder</td>	
+	  <td><a href="https://github.com/DenisDonchenko/rest_api_library/tree/main/src/main/java/com/library/org/library_system/controller">Controllers folder</a></td>
 	</tr>
 	<tr>
 	  <td>Entities</td>
-	  <td>Entities folder</td>	
+	  <td><a href="https://github.com/DenisDonchenko/rest_api_library/tree/main/src/main/java/com/library/org/library_system/model">Entities folder</a></td>	
 	</tr>
+	<tr>
+	  <td>Service</td>
+	  <td><a href="https://github.com/DenisDonchenko/rest_api_library/tree/main/src/main/java/com/library/org/library_system/service">Service folder</a></td>	
+	</tr>
+	<tr>
+	  <td>Repository</td>
+	  <td><a href="https://github.com/DenisDonchenko/rest_api_library/tree/main/src/main/java/com/library/org/library_system/repository">Repository folder</a></td>	
+	</tr>
+	<tr>
+	  <td>Tests controllers</td>
+	  <td><a href="https://github.com/DenisDonchenko/rest_api_library/tree/main/src/test/java/com/library/org/library_system/controllers">Tests controllers folder</a></td>	
+	</tr>
+	<tr>
+	  <td>Tests service</td>
+	  <td><a href="https://github.com/DenisDonchenko/rest_api_library/tree/main/src/test/java/com/library/org/library_system/service">Tests service folder</a></td>	
+	</tr>
+	
 </tbody>
 </table>
 
