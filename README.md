@@ -145,7 +145,7 @@ The app defines following CRUD APIs.
 
 ![img.png](img.png)
 
-<h1>Relation</h1>
+<h1>Swagger</h1>
 <h4>You can use the Swagger API Documentation at http://{Your_Server}:{Port}/swagger-ui.html</h4>
 
 ![img_1.png](img_1.png)
