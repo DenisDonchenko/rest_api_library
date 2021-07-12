@@ -20,6 +20,7 @@ public class UserService {
         return userRepository.findById(id_user).orElseThrow(() -> new ResourceNotFoundException("User width id"+ id_user+ "not found"));
     }
     public void addUser(User user){
+
         userRepository.save(user);
     }
     public User updateUser(Long id_user, User userRequest){

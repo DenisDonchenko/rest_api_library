@@ -20,24 +20,37 @@ public class BookingService {
     private UserRepository userRepository;
 
     public Iterable<Booking> findAllBooking(){
+
+        for (Booking booking: bookingRepository.findAll()) {
+            System.out.println(booking.toString());
+        }
         return bookingRepository.findAll();
     }
+
 
     public Booking findBookingById(Long id_booking){
         return bookingRepository.findById(id_booking).orElseThrow(()-> new ResourceNotFoundException("Booking width id"+ id_booking+ "not found"));
     }
-    public Booking takeBook(Long id_book, Long id_user,String coment){
-        Booking booking= new Booking();
+
+    public Booking takeBook(Long id_book, Long id_user){
         exceptionMethod(id_book,  id_user);
+        Booking booking= new Booking();
         booksRepository.updateBook(id_book,false);
-        booking.setComent(coment);
+
+        booking.setComent("Book taken");
         booking.setUser(userRepository.getById(id_user));
         booking.setBook(booksRepository.getById(id_book));
     return  bookingRepository.save(booking);
     }
-    public void returnedBook(Long id_book){
-
+    public Booking returnedBook(Long id_book, Long id_user){
+        exceptionMethod(id_book,  id_user);
+        Booking booking= new Booking();
         booksRepository.updateBook(id_book,true);
+
+        booking.setBook(booksRepository.getById(id_book));
+        booking.setUser(userRepository.getById(id_user));
+        booking.setComent("Book returned");
+        return  bookingRepository.save(booking);
     }
     private void exceptionMethod(Long id_book, Long id_user){
 

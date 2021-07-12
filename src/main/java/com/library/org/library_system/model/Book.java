@@ -8,7 +8,7 @@ import java.util.Set;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_book")
+    @Column(name = "id")
     private Long id;
     @Column(name = "title")
     private String title;
@@ -17,10 +17,19 @@ public class Book {
     @Column(name = "availability")
     private boolean availability;
 
+
     @OneToMany(mappedBy = "book",targetEntity = Booking.class)
     private Set<Booking> listBooking;
 
     public Book() {    }
+
+    public Book(Long id, String title, String author, boolean availability, Set<Booking> listBooking) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.availability = availability;
+        this.listBooking = listBooking;
+    }
 
     public Set<Booking> getListBooking() {
         return listBooking;
@@ -61,4 +70,6 @@ public class Book {
     public void setAvailability(boolean availability) {
         this.availability = availability;
     }
+
+
 }

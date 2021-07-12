@@ -8,7 +8,7 @@ import java.util.Set;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_user")
+    @Column(name = "id")
     private Long id;
     @Column(name = "first_name")
     private String first_name;
@@ -21,6 +21,20 @@ public class User {
     private Set<Booking> listBooking;
 
     public User() { }
+
+    public User(Long id, String first_name, String last_name, String phone_number, Set<Booking> listBooking) {
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.phone_number = phone_number;
+        this.listBooking = listBooking;
+    }
+    public User(String first_name, String last_name, String phone_number) {
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.phone_number = phone_number;
+    }
 
     public Set<Booking> getListBooking() {
         return listBooking;
@@ -61,4 +75,6 @@ public class User {
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
     }
+
+
 }

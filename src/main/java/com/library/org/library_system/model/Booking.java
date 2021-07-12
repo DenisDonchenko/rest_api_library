@@ -1,6 +1,8 @@
 package com.library.org.library_system.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 
@@ -9,7 +11,7 @@ import javax.persistence.*;
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_order")
+    @Column(name = "id")
     private Long id;
 
     @JsonIgnore
@@ -24,6 +26,12 @@ public class Booking {
 
     @Column(name = "coment")
     private String coment;
+
+
+    public Booking() {}
+
+
+
 
     public String getComent() {
         return coment;
@@ -56,5 +64,6 @@ public class Booking {
     public void setUser(User user) {
         this.user = user;
     }
+
 }
 

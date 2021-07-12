@@ -14,7 +14,7 @@ import javax.transaction.Transactional;
 public interface BooksRepository extends JpaRepository<Book,Long> {
 
     @Modifying
-    @Query(value = "UPDATE books SET availability=:availability WHERE id_book=:id_book ", nativeQuery = true)
+    @Query(value = "UPDATE books SET availability=:availability WHERE id=:id_book ", nativeQuery = true)
     void updateBook(@Param("id_book") Long id_book,@Param("availability") boolean availability);
 
     @Query(value = "select  * from books where books.availability=true", nativeQuery = true)
