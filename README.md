@@ -165,6 +165,13 @@ The app defines following CRUD APIs.
  </thead>
 <tbody>
 	<tr>
+	  <td>GET</td>
+	  <td>/booking/takenBooks</td>
+	  <td>Get information about the users and the books they currently have</td>
+	  <td>JSON</td>
+	</tr>
+    <tr>
+	<tr>
 	  <td>POST</td>
 	  <td>/booking/take/{id_book}/{id_user}</td>
 	  <td>Take book</td>
